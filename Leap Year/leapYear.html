@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar
+
+// creating my own custom year to check a leap year:
+
+let currentYear = new Date().setFullYear(2020);
+currentYear = new Date(currentYear).getFullYear();
+let year = currentYear / 4;
+year = year.toString();
+if(year.includes('.')){
+    console.log('year ' + currentYear + ' is not a leap year :(');
+}
+else {
+    console.log('year '+ currentYear + ' is a leap year :)')
+}
+
+// current year to check a leap year:
+
+let Year = new Date().getFullYear();
+Year = Year / 4;
+Year = Year.toString();
+if(Year.includes('.')){
+    console.log('year ' + new Date().getFullYear() + ' is not a leap year :(');
+}
+else {
+    console.log('year ' + new Date().getFullYear() + ' is not a leap year :(');
+}
+
+
+// Method 2 ES5 version
+const todayYear = new Date().getFullYear();
+if(todayYear % 4 === 0){
+    console.log(todayYear + ' is a leap year ...');
+}
+else {
+    console.log(todayYear + ' is not a leap year !');
+}
+
+// ES6 version
+(todayYear % 4 === 0) ? console.log(todayYear + ' is a leap year <><>...') : console.log(todayYear + ' is not a leap year <><>!');
+
+</script>    
+</body>
+</html>
