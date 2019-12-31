@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// 8  Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched"
+let takeNum = prompt('please select number from 1 to 10 !');
+takeNum =  Number(takeNum);
+if(isNaN(takeNum)){
+    alert('please provide correct Number..')
+} 
+else {
+    if(takeNum > 10){
+        alert('please provide Number between 1 to 10');
+    }
+    else{
+        const randomNum = Math.floor(Math.random() * 11)
+        if(randomNum === takeNum){
+            alert('congrats! you selected num is correct!');
+            // console.log('congrats! you selected num is correct!',randomNum,'===',takeNum)
+        }
+        else { 
+            alert('try again!')
+            // console.log('try again!',randomNum,'===',takeNum)
+            
+        }
+    }
+
+}
+
+// ES6 Method
+const randomNum = Math.floor(Math.random() * 11)
+isNaN(takeNum) ? (alert('please provide correct Number..')) : takeNum > 10 ? alert('please provide Number between 1 to 10') :  randomNum === takeNum ? alert('congrats! you selected num is correct!') : alert('try again!');
+
+</script>    
+</body>
+</html>
