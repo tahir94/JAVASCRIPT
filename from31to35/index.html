@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+// 31. Write a JavaScript program to find the largest of three given integers.
+
+function greaterNum(num1,num2,num3){
+    let max_value;
+    if(num1 > num2){
+        max_value = num1;
+    } 
+    else {
+        max_value = num2;
+    }
+
+    if(num3 > max_value){
+        max_value = num3;
+    }
+    else {
+       max_value;
+    }
+    console.log(max_value);
+    
+};
+greaterNum(2,8,5);
+greaterNum(30,20,10);
+greaterNum(-50,50,150);
+
+// 32. Write a JavaScript program to find a value which is nearest to 100 from two different given integer values.
+
+function nearest100(x,y){
+x1 = Math.abs(x - 100);
+y1 = Math.abs(y - 100);
+if(x1 < y1){
+   result = x;
+
+}
+else {
+    result = y;
+}
+console.log(result)
+};
+nearest100(89,90);
+nearest100(90,89);
+nearest100(30,50);
+nearest100(150,200);
+nearest100(-90,-89);
+nearest100(90,90);
+
+// 33. Write a JavaScript program to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+
+function two_int_range(x,y){
+if((x >= 40 && x <= 60) && (y >= 40 && y <= 60)){
+    console.log(true)
+    return;
+}
+else{
+    console.log(false);
+    
+}
+if((x >= 70 && y <= 100) && (y >= 70 && y <= 100) ){
+    console.log(true)
+}
+else{
+    console.log(false);
+}
+
+}
+// two_int_range(44,56);
+// two_int_range(50,89);
+
+// two_int_range(50,80);
+// two_int_range(45,65);
+// two_int_range(30,120);
+
+
+// Second method
+function numbers_ranges(x,y){
+(x >= 40 && x <= 60 && y >= 40 && y <= 60) || (x >= 70 && x <= 100 && y >= 70 && y <= 100) ? console.log(true) : console.log(false); 
+}
+numbers_ranges(44,56);
+numbers_ranges(70,95);
+numbers_ranges(50, 89);
+
+// 34. Write a JavaScript program to find the larger number from the two given positive integers, the two numbers are in the range 40..60 inclusive
+
+function greaterNumin40_60(x,y){
+    if(x >= 40 && y <= 60){
+        if(x > y){
+            max_value = x;
+        }
+        else{
+            max_value = y;
+        }
+        console.log(max_value);
+    }
+    else {
+        console.log(false);
+        return false;
+    }
+}
+greaterNumin40_60(35,50);
+greaterNumin40_60(45,75);
+greaterNumin40_60(30,70);
+greaterNumin40_60(50,45);
+greaterNumin40_60(40,59);
+
+// 35. Write a program to check whether a specified character exists within the 2nd to 4th position in a given string. 
+// Method 1
+
+function checkChar(str){
+second_to_4th = str.substring(1,4);
+second_to_4th.includes('a') ? console.log(true) : console.log(false);
+}
+checkChar('javascript');
+
+// Method 2
+
+function charCheck(str,char){
+    
+    for(var i = 0; i < str.length; i++){
+        if(str[i] === char){
+            console.log(true,str[i]);
+        }
+        else {
+            console.log(false,str[i]);
+        }
+    }
+};
+charCheck('world','r');
+
+
+</script>     
+</body>
+</html>
