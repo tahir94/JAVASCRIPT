@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// 36. Write a JavaScript program to check whether the last digit of the three given positive integers is same. 
+function lastDigit(x,y,z){
+x1 = x.toString(); 
+y1 = y.toString(); 
+z1 = z.toString(); 
+if((x > 0 && y > 0 && z > 0) && x1[x1.length - 1] === y1[y1.length -1] && y1[y1.length -1] === z1[z1.length -1] && x1[x1.length - 1] === z1[z1.length - 1]){
+    console.log(true);
+}
+else{
+    console.log(false);
+}
+}
+lastDigit(10,20,30);
+lastDigit(10,20,35);
+lastDigit(10,-20,30);
+
+
+// Method 2
+
+function last_digit(x,y,z){
+if(x > 0 && y > 0 && z > 0){
+    console.log(x % 10 === y % 10 && y % 10 === z % 10 && x % 10 === z % 10);
+}
+else {
+    console.log(false);
+}
+}
+last_digit(40,500,200);
+last_digit(-200,50,60);
+last_digit(20,40,66);
+</script>
+</body>
+</html>
