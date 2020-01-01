@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+//  16. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.
+function sum(a,b){
+    a === b ? console.log((a+b) * 3)  : console.log(a + b); 
+}
+sum(5,10);
+sum(5,5);
+
+// 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19. 
+function computeNineteen(a){
+a > 19 ? console.log((a - 19)*3) : console.log(19 - a);
+}
+computeNineteen(45);
+computeNineteen(15)
+
+// 18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50. 
+
+function computeFifty(a,b){
+a + b === 50 || a === 50 || b === 50 ? console.log(true) : console.log(false);
+}
+computeFifty(45,5);
+computeFifty(10,5);
+computeFifty(50,10);
+
+// 20. Write a JavaScript program to check from two given integers, whether one is positive and another one is negative.
+function ComputePosNeg(a,b){
+//  (a > 0 && b > 0) ? console.log(true) : console.log(false);
+(a > 0 && b > 0) || (a < 0 && b < 0) ? console.log(false) : console.log(true);
+
+};
+ComputePosNeg(2,2);
+ComputePosNeg(-2,2);
+ComputePosNeg(2,-2);
+ComputePosNeg(-2,-2);
+
+
+// 21. Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+
+function checkPy(val){
+    if(val.startsWith('Py')){
+        console.log(val);
+    }
+    else {
+        console.log('py'+val)
+    }
+}
+
+checkPy('karachi');
+checkPy('pakistan');
+checkPy('Pyrate');
+
+// Method 2
+function string_check(val){
+(val === null) || (val === undefined) || (val.substring(0,2) === 'Py') ? console.log(val) : console.log('Py' + val); 
+}
+string_check('thon');
+string_check('Python');
+
+
+// 22. Write a JavaScript program to remove a character at the specified position of a given string and return the new string. 
+function change_char(str,pos){
+part1 = str.substring(0,pos);
+part2 = str.substring(pos + 1);
+console.log(part1 + part2);
+}
+change_char('welcome',2);
+change_char('dust',0);
+change_char('hello',4);
+
+// 23. Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1.  
+function first_last(str){
+    first_char = str.substring(0,1);
+    last_char  = str.substring(str.length-1) 
+    mid_char = str.substring(1,str.length - 1);
+    str.length <= 1 ? console.log(str) : console.log(last_char + mid_char + first_char)
+}
+
+// Method 2 with es5 version
+// function first_last(str){
+//     if(str.length <= 1){
+//         return console.log(str);
+//     }
+//     first_char = str.charAt(0);
+//     last_char = str.charAt(str.length -1);
+//     mid_char = str.substring(1,str.length - 1);
+//     console.log(last_char + mid_char + first_char)
+// }
+first_last('a');
+first_last('asd');
+first_last('swift');
+
+//24. Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.
+function front_back(str){
+
+// same operations but with different methods
+// first_char = str.substring(0,1);
+// first_char = str.slice(0,1)
+first_char = str.charAt(0);
+console.log(first_char + str + first_char);
+}
+front_back('asd');
+front_back('hello');
+front_back('qwe');
+
+// 25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or a multiple of 7.
+function multiple_3(num){
+
+multiple = num / 3;
+console.log(multiple);
+multiple = multiple.toString();
+!multiple.includes('.') ? console.log('true') : console.log('false');
+}
+multiple_3(3);
+multiple_3(25);
+multiple_3(27);
+function multiple_7(num){
+    multiple = num / 7;    
+    multiple = multiple.toString();
+!multiple.includes('.') ? console.log('true') : console.log('false');
+}
+
+multiple_7(7);
+multiple_7(15);
+multiple_7(21);
+// Method 2 with ES6 version
+
+function multiple_3_7(num){
+(num % 3 === 0 || num % 7 === 0)? console.log(true) : console.log(false);
+}
+multiple_3_7(12);
+multiple_3_7(14);
+multiple_3_7(10);
+multiple_3_7(11);
+
+// 26. Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more
+
+function back_3(str){
+back = str.substring(str.length - 3);
+// str.slice(-3) both are same methods
+(str.length >= 3) ? console.log(back + str + back) : console.log(false);
+}
+back_3('ab');
+back_3('asd');
+back_3('qwerty');
+
+// 27. Write a JavaScript program to check whether a string starts with 'Java' and false otherwise
+function check_java(str){
+    console.log(str.substring(0,4));
+    (str.substring(0,4) === 'java') ? console.log(true)  :console.log(false);
+};
+check_java('jav');
+check_java('java');
+check_java('javascript');
+check_java('shavajava');
+check_java('hello World');
+
+
+// 28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if both of them are in the said range. 
+
+function range_50_and_99(num1,num2){
+    (num1 >= 50 && num2 <= 99) ? console.log(true) : console.log(false);
+}
+range_50_and_99(12,101);
+range_50_and_99(52,80);
+range_50_and_99(15,99);
+
+
+// 28(2). Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them are in the said range. 
+
+function range_50_99(num1,num2){
+(num1 >= 50 && num1 <= 99) || (num2 >= 50 && num2 <= 99) ? console.log(true) : console.log(false);
+}
+range_50_99(12,101);
+range_50_99(52,80);
+range_50_99(15,99);
+
+// 29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range
+
+function check_three_nums(num1,num2,num3){
+    (num1 >= 50 && num1 <= 99) || (num2 >= 50 && num2 <= 99) || (num3 >= 50 && num3 <= 99) ? console.log(true) : console.log(false);
+}
+check_three_nums(50,90,99);
+check_three_nums(5,9,199);
+check_three_nums(65,89,199);
+check_three_nums(65,9,199);
+
+
+// 30. Write a JavaScript program to check whether a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one
+
+function checkString(str){
+    if(str.includes('script')){
+        str = str.substring(0,4);
+        console.log(str);
+    }
+    else{
+        console.log(str)
+    }
+};
+checkString('javascript');
+checkString('Angular');
+
+// Method 2
+function checkScript(str){
+(str.substring(10,4) === 'script') ? console.log(str.substring(0,4) + str.substring(10,str.length)) : console.log(str);
+
+}
+checkScript('javascript');
+checkScript('coffeescript');
+
+// 30.2 Write a JavaScript program to check whether a string "Script" presents at anywhere in the given string,if "Script" presents in the string return the string without "Script" otherwise return the original one
+
+function scriptCheck(str){
+result = str.split('script');
+result = result[0] + result[1];
+console.log('result',result);
+};
+scriptCheck('helloscriptedworld');
+
+
+</script>   
+</body>
+</html>o
