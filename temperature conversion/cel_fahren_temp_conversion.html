@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit. -->
+<label>
+   <span>convert the temperature: </span> 
+<input type="number" id="tempValue">
+</label>
+<div>
+    The result is : <span id="tempResult"></span>
+</div>
+
+ <br>
+ <button onclick="tempConvert('celsius')">Celsius</button>
+ <button onclick="tempConvert('fahrenheit')">Farenheit</button>
+
+<script>
+    // celsius formula
+    // C = (F - 32) * 5 / 9
+
+    // farhrenheit formula
+    // F = C * 1.8 + 32
+    
+    function tempConvert(arg){
+           const tempValue =  document.getElementById('tempValue').value;
+           let result = 0;
+
+        //    ES6 Version
+           arg === 'celsius' ?  result = (tempValue - 32) * 5 / 9 : result = tempValue * 1.8 + 32;
+        // ES5 VERSION
+        // if(arg === 'celsius'){
+        //     result = (tempValue - 32) * 5 / 9 
+        // }
+        // else {
+        //     result = tempValue * 1.8 + 32;
+            
+        // }
+
+        document.getElementById('tempResult').innerHTML = result;
+    }
+</script>   
+</body>
+</html>
