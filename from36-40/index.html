@@ -39,6 +39,23 @@ else {
 last_digit(40,500,200);
 last_digit(-200,50,60);
 last_digit(20,40,66);
+
+// 37. Write a JavaScript program to create new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.
+
+function convert_upper_lower(str){
+    if(str.length < 3){
+       result = str.toUpperCase();
+       console.log(result);
+    }
+    else{
+        result = str.substring(0,3).toLowerCase() + str.substring(3);
+        console.log(result);
+    }
+}
+convert_upper_lower('Apple');
+convert_upper_lower('orange');
+convert_upper_lower('PINEAPPLE');
+convert_upper_lower('hi');
 </script>
 </body>
 </html>
