@@ -67,6 +67,17 @@ computeSum(30,30);
 computeSum(20,30);
 computeSum(10,30);
 computeSum(50,50);
+
+// 40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.
+
+function check8(x,y){
+   (x === 8 || y === 8 || x + y === 8 || Math.abs(x - y) === 8) ? console.log(true)  :console.log(false);
+}
+check8(8,0);
+check8(4,4);
+check8(10,2);
+check8(5,5);
+check8(6,14);
 </script>
 </body>
 </html>
