@@ -157,6 +157,19 @@ comparison_bw_20(25,30,35);
 comparison_bw_20(30,45,21);
 comparison_bw_20(23, 23, 10);
 
+// 45. Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15.
+
+function check_15(x,y){
+(x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15) ? console.log(true) : console.log(false);
+}
+check_15(10,5);
+check_15(5,5);
+check_15(20,5);
+check_15(5,20);
+check_15(15,20);
+check_15(10,15);
+
+
 </script>
 </body>
 </html>
