@@ -169,6 +169,16 @@ check_15(5,20);
 check_15(15,20);
 check_15(10,15);
 
+// 46. Write a JavaScript program to check two given non-negative integers that whether one of the number (not both) is multiple of 7 or 11.
+
+function check_multiple_7_11(x,y){
+    (x % 7 === 0 || x % 11 === 0) || (y % 7 === 0 || y % 11 === 0) ? console.log(true) : console.log(false);
+
+} 
+check_multiple_7_11(14,22);
+check_multiple_7_11(55,28);
+check_multiple_7_11(88,20);
+check_multiple_7_11(30,40);
 
 </script>
 </body>
