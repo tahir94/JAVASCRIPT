@@ -180,6 +180,21 @@ check_multiple_7_11(55,28);
 check_multiple_7_11(88,20);
 check_multiple_7_11(30,40);
 
+// 48. Write a JavaScript program to reverse a given string.
+
+a = 'world'
+var b = "";
+count = 1;
+for(var i = 0; i < a.length; i++){
+b = b + a[a.length - count]
+console.log(b);
+count++;
+}
+
+// Method 2
+b = a.split("").reverse().join("");
+console.log(b);
+
 </script>
 </body>
 </html>
