@@ -195,6 +195,22 @@ count++;
 b = a.split("").reverse().join("");
 console.log(b);
 
+// 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet. 
+
+function replace_after_char(str){
+
+for(var i = 0;i < str.length; i++){
+incrementalChar = String.fromCharCode(str[i].charCodeAt(0) + 1);
+str = str.split("");
+str.splice(i,1,incrementalChar);
+str = str.join("");
+console.log(str)
+}
+}
+replace_after_char('python');
+replace_after_char('in');
+replace_after_char('abc');
+
 </script>
 </body>
 </html>
