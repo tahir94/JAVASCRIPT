@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// 51. Write a JavaScript program to convert a given number to hours and minutes
+
+// The Math.trunc() function returns the integer part of a number by removing any fractional digits.   
+function nums_to_hrs_mins(num){
+let hrs = num / 60;
+hrs = Math.trunc(hrs);
+const mins = num % 60;
+console.log(hrs + ' : ' + mins)
+}
+nums_to_hrs_mins(80);
+nums_to_hrs_mins(220);
+
+</script>    
+</body>
+</html>
