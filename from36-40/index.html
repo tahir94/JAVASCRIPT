@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// 36. Write a JavaScript program to check whether the last digit of the three given positive integers is same. 
+function lastDigit(x,y,z){
+x1 = x.toString(); 
+y1 = y.toString(); 
+z1 = z.toString(); 
+if((x > 0 && y > 0 && z > 0) && x1[x1.length - 1] === y1[y1.length -1] && y1[y1.length -1] === z1[z1.length -1] && x1[x1.length - 1] === z1[z1.length - 1]){
+    console.log(true);
+}
+else{
+    console.log(false);
+}
+}
+lastDigit(10,20,30);
+lastDigit(10,20,35);
+lastDigit(10,-20,30);
+
+
+// Method 2
+
+function last_digit(x,y,z){
+if(x > 0 && y > 0 && z > 0){
+    console.log(x % 10 === y % 10 && y % 10 === z % 10 && x % 10 === z % 10);
+}
+else {
+    console.log(false);
+}
+}
+last_digit(40,500,200);
+last_digit(-200,50,60);
+last_digit(20,40,66);
+
+// 37. Write a JavaScript program to create new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.
+
+function convert_upper_lower(str){
+    if(str.length < 3){
+       result = str.toUpperCase();
+       console.log(result);
+    }
+    else{
+        result = str.substring(0,3).toLowerCase() + str.substring(3);
+        console.log(result);
+    }
+}
+convert_upper_lower('Apple');
+convert_upper_lower('orange');
+convert_upper_lower('PINEAPPLE');
+convert_upper_lower('hi');
+
+// 39. Write a JavaScript program to compute the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+
+function computeSum(x,y){
+    const sum = x + y;
+    (sum >= 50 && sum <= 80) ? console.log(true) : console.log(false);
+}
+computeSum(30,30);
+computeSum(20,30);
+computeSum(10,30);
+computeSum(50,50);
+
+// 40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.
+
+function check8(x,y){
+   (x === 8 || y === 8 || x + y === 8 || Math.abs(x - y) === 8) ? console.log(true)  :console.log(false);
+}
+check8(8,0);
+check8(4,4);
+check8(10,2);
+check8(5,5);
+check8(6,14);
+
+// 41. Write a JavaScript program to check three given numbers, if the three numbers are same return 30 otherwise return 20 and if two numbers are same return 40.
+
+function checkThreeNum(x,y,z){
+    if(x === y && y===z && x===z){ 
+            console.log(true,30);
+            return;
+    }
+    
+        if(x === y || y===z || x===z){
+            console.log(true,40);
+            return;
+        }
+        else {
+        console.log(false,20)
+    }
+};
+checkThreeNum(30,30,30);
+checkThreeNum(20,20,30);
+checkThreeNum(-20,30,20);
+
+// Method 2
+function three_numbers(x,y,z){
+    if(x === y && y ===z){
+        return 30;
+    }
+    if(x === y || y === z || x === z){
+        return 40;
+    }
+    return 20;
+}
+console.log(three_numbers(8,8,8));
+console.log(three_numbers(8,8,18));
+console.log(three_numbers(8,7,18));
+
+// 43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+
+function rightMostDigit(x,y,z){
+    x1 = x.toString();
+    y1 = y.toString();
+    z1 = z.toString();
+    x1 = x1[x1.length -1];
+    y1 = y1[y1.length -1];
+    z1 = z1[z1.length -1];
+    if(x1 === y1 || y1 === z1 || x1 === z1 ){
+        console.log(true);
+    }
+    else {
+        console.log(false);
+    }
+}
+rightMostDigit(22,42,32);
+rightMostDigit(52,62,33);
+rightMostDigit(20,4,55);
+
+// Method 2
+
+function same_last_digit(x,y,z){
+    (x % 10 === y % 10 || y % 10 === z % 10 || x % 10 === z% 10) ? console.log(true) : console.log(false);
+};
+same_last_digit(10,30,40);
+same_last_digit(22,32,42);
+same_last_digit(20,42,52);
+same_last_digit(10,2,95);
+
+// 44. Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others. 
+
+function comparison_bw_20(x,y,z){
+if((x >= 20 && (x < y || x < z)) || (y >= 20 && (y < x || y < z)) || (z >= 20 && (z < x || z < y))){
+    console.log(true);
+}
+else { 
+    console.log(false)
+}
+};
+comparison_bw_20(25,30,35);
+comparison_bw_20(30,45,21);
+comparison_bw_20(23, 23, 10);
+
+// 45. Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15.
+
+function check_15(x,y){
+(x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15) ? console.log(true) : console.log(false);
+}
+check_15(10,5);
+check_15(5,5);
+check_15(20,5);
+check_15(5,20);
+check_15(15,20);
+check_15(10,15);
+
+// 46. Write a JavaScript program to check two given non-negative integers that whether one of the number (not both) is multiple of 7 or 11.
+
+function check_multiple_7_11(x,y){
+    (x % 7 === 0 || x % 11 === 0) || (y % 7 === 0 || y % 11 === 0) ? console.log(true) : console.log(false);
+
+} 
+check_multiple_7_11(14,22);
+check_multiple_7_11(55,28);
+check_multiple_7_11(88,20);
+check_multiple_7_11(30,40);
+
+// 48. Write a JavaScript program to reverse a given string.
+
+a = 'world'
+var b = "";
+count = 1;
+for(var i = 0; i < a.length; i++){
+b = b + a[a.length - count]
+console.log(b);
+count++;
+}
+
+// Method 2
+b = a.split("").reverse().join("");
+console.log(b);
+
+// 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet. 
+
+function replace_after_char(str){
+
+for(var i = 0;i < str.length; i++){
+incrementalChar = String.fromCharCode(str[i].charCodeAt(0) + 1);
+str = str.split("");
+str.splice(i,1,incrementalChar);
+str = str.join("");
+console.log(str)
+}
+}
+replace_after_char('python');
+replace_after_char('in');
+replace_after_char('abc');
+
+
+// 50. Write a JavaScript program to capitalize the first letter of each word of a given string. 
+
+function first_capital_char(str){
+    result = str.substring(0,1).toUpperCase() + str.substring(1);
+    return result;
+}
+console.log(first_capital_char('java'));
+console.log(first_capital_char('orange'));
+console.log(first_capital_char('banana'));
+
+// Method 2
+
+function capital_letter(str){
+    str = str.split(" ");
+    for(var i= 0; i < str.length; i++){
+        str[i] = str[i][0].toUpperCase() + str[i].substring(1);
+    }
+    str = str.join(" ")
+    return str;
+}
+console.log(capital_letter('Write a JavaScript program to capitalize the first letter of each word of a given string.'))
+</script>
+</body>
+</html>
