@@ -211,6 +211,17 @@ replace_after_char('python');
 replace_after_char('in');
 replace_after_char('abc');
 
+
+// 50. Write a JavaScript program to capitalize the first letter of each word of a given string. 
+
+function first_capital_char(str){
+    result = str.substring(0,1).toUpperCase() + str.substring(1);
+    return result;
+}
+console.log(first_capital_char('java'));
+console.log(first_capital_char('orange'));
+console.log(first_capital_char('banana'));
+
 </script>
 </body>
 </html>
