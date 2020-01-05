@@ -21,6 +21,48 @@ console.log(hrs + ' : ' + mins)
 nums_to_hrs_mins(80);
 nums_to_hrs_mins(220);
 
+// 52. Write a JavaScript program to convert the letters of a given string in alphabetical order.  
+// incomplete work
+
+// count = 0;
+// count1 = 1;
+// a = 'xabfced';
+// b="";
+// for(var i =0; i < a.length;i++){
+// console.log(a);
+// if(a[count] !== undefined){
+// if(a[count] > a[count1]){
+// // if(a[count1] === undefined){
+// //     b = b + a[count];
+// //     break;
+// // }    
+// b = b + a[count1] + a[count];
+// }
+// else {
+//     if(a[count1] === undefined){
+//        if(a[count-1] > a[count]){
+//          b = b + a[count] + a[count-1];
+//          break;
+
+//        } 
+// } 
+// b = b + a[count] + a[count1];
+// }
+// }
+// count = count+2;
+// count1 = count1+2;
+// // b = b.replace('undefined',"");
+// console.log(b,count,'===',count1)
+// }
+
+// Complete work
+function arrangeAlphabets(str){
+  str = str.split("").sort().join("");
+  console.log(str)
+}
+arrangeAlphabets('zays');
+
+
 </script>    
 </body>
 </html>
