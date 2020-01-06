@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    
+<script>
+// 56. Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas. 
+
+function division_string(n1, n2) {
+  
+//   n1 = 80;
+//   n2 = 6;
+  
+  var div = Math.round(n1 / n2).toString(),
+  result_array = div.split("");
+  
+  if (div >= 1000)
+  {
+  for (var i = div.length - 3; i > 0; i -= 3) 
+  {
+  result_array.splice(i, 0, ",");
+  }
+  result_array;
+  }
+  console.log(result_array);
+}
+division_string(5000,2);
+
+// 57. Write a JavaScript program to create a new string of specified copies (positive number) of a given string. 
+
+function strCopies(str,n){
+arr = [];    
+for(var i = 1;i <= n;i++){
+    arr.push(str);
+    result = arr.join('');
+}
+    console.log(result);
+};
+strCopies('asd',3);
+strCopies('hello',5);
+
+// Method 2
+function string_copies(str,n){
+n < 0 ? console.log(false) : console.log(str.repeat(n))
+}
+string_copies('abc',02)
+</script>    
+</body>
+</html>
