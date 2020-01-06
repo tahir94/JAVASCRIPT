@@ -111,6 +111,19 @@ console.log(vowels_in_string);
 }
 vowelCount('hello');
 
+// 55. Write a JavaScript program to check whether a given string contains equal number of p's and t's. 
+
+function check_p_t(str){
+  arr_p = [];
+  arr_t = [];
+for(var i = 0; i < str.length ; i++){
+  (str[i] === 'p') ? arr_p.push(str[i]) : str[i];
+  (str[i] === 't') ? arr_t.push(str[i]) : str[i];
+}
+  (arr_p.length === arr_t.length) ? console.log(true) : console.log(false);
+  console.log(arr_p,'===',arr_t)
+};
+check_p_t('paatpss')
 </script>    
 </body>
 </html>
