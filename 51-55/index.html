@@ -94,6 +94,23 @@ for(var i =0 ; i < str.length ; i++){
   console.log(vowels_in_string);
 }
 countVowel('chair');
+
+// Method 2
+vowelArr2 = [];
+function vowelCount(str){
+const vowel = 'aeiou';
+for(var i = 0; i<str.length;i++){
+  for(var j=0; j<vowel.length;j++){
+    if(str[i] === vowel[j]){
+      vowelArr2.push(vowel[j]);
+    }
+  }
+}
+const vowels_in_string = vowelArr2.length;
+console.log(vowels_in_string);
+}
+vowelCount('hello');
+
 </script>    
 </body>
 </html>
