@@ -62,7 +62,38 @@ function arrangeAlphabets(str){
 }
 arrangeAlphabets('zays');
 
+// 53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
 
+
+// find the total 'b' available in the below string (out of the above point. just for info)
+
+// var foo = "foo bar baz bat";
+// var pos = foo.indexOf("b");
+// while(pos > -1) {
+//     document.write(pos + "<br />");
+//     pos = foo.indexOf("b", pos+1);
+// }
+
+function ab_check(str){
+  return (/a...b/).test(str) || (/b...a/).test(str);
+}
+console.log(ab_check('chainsbreak'));
+console.log(ab_check('pane borrowed'));
+console.log(ab_check('abCheck'));
+
+// 54. Write a JavaScript program to count the number of vowels in a given string. 
+vowelArr = [];
+function countVowel(str){
+for(var i =0 ; i < str.length ; i++){
+  if(str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u'){
+    vowelArr.push(str[i]);
+  }
+
+}
+  const vowels_in_string = vowelArr.length;
+  console.log(vowels_in_string);
+}
+countVowel('chair');
 </script>    
 </body>
 </html>
