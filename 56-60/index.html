@@ -73,6 +73,21 @@ last_three_copies('abc');
 last_three_copies('geography');
 last_three_copies('a');
 
+// Method 2
+function lastThreeCopies(str){
+if(str.length >= 3) {
+    str= str.substring(str.length - 3);
+    str = str.repeat(4);
+    return str;
+}
+else {
+    return false;
+}
+};
+console.log(lastThreeCopies('asd'));
+console.log(lastThreeCopies('a'));
+console.log(lastThreeCopies('chair'));
+
 
 </script>    
 </body>
