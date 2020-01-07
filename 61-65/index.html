@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// 61. Write a JavaScript program to concatenate two strings except their first character.  
+
+function concatenate_strings(a,b){
+if(a.length < 2  || b.length < 2) return false;
+result  = a.substring(1) + b.substring(1);
+return result;
+}
+console.log(concatenate_strings('php','js'));
+console.log(concatenate_strings('a','s'));
+console.log(concatenate_strings('s','sb'));
+
+</script>    
+</body>
+</html>
