@@ -21,6 +21,23 @@ console.log(concatenate_strings('php','js'));
 console.log(concatenate_strings('a','s'));
 console.log(concatenate_strings('s','sb'));
 
+// 62. Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
+
+function move_first_three(str){
+if(str.length >= 3){
+ starting_string = str.substring(0,3);
+ remaining_string = str.substring(3);
+ result = remaining_string + starting_string; 
+ return result;
+}
+else { 
+    return false;
+}
+
+};
+console.log(move_first_three('python'));
+console.log(move_first_three('hi'));
+
 </script>    
 </body>
 </html>
