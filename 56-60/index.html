@@ -88,6 +88,22 @@ console.log(lastThreeCopies('asd'));
 console.log(lastThreeCopies('a'));
 console.log(lastThreeCopies('chair'));
 
+// 59. Write a JavaScript program to extract the first half of a string of even length.  
+
+function half_length(str){
+if(str.length % 2 === 0){
+const halfLength = str.length / 2;
+str = str.substring(0,halfLength);
+console.log(str)
+
+}
+else {
+    console.log(false);
+}
+
+}
+half_length('javascript');
+half_length('hello world');
 
 </script>    
 </body>
