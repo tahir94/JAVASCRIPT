@@ -49,7 +49,31 @@ strCopies('hello',5);
 function string_copies(str,n){
 n < 0 ? console.log(false) : console.log(str.repeat(n))
 }
-string_copies('abc',02)
+string_copies('abc',02);
+
+// 58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string. The length of the given string must be 3 and above.
+
+function last_three_copies(str){
+arr = [];
+    if(str.length >= 3){
+        str = str.substring(str.length - 3);
+        for(var i =0; i <= str.length; i++){
+            arr.push(str);
+            result = arr.join("");
+            console.log(result)
+            
+        }
+    }
+    else{
+        console.log(false);
+    }
+};
+last_three_copies('python');
+last_three_copies('abc');
+last_three_copies('geography');
+last_three_copies('a');
+
+
 </script>    
 </body>
 </html>
