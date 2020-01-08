@@ -38,6 +38,53 @@ else {
 console.log(move_first_three('python'));
 console.log(move_first_three('hi'));
 
+// 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater or equal to three.
+
+
+// Math.trunc()  (eliminate fractional part)
+// Math.floor()  (round down)
+// Math.ceil()   (round up)
+// Math.round()  (round to nearest integer)
+  
+function middle_three_char(str){
+    if(str.length >= 3){
+        if(str.length % 2 !== 0){
+           mid_first_int =  Math.floor(str.length / 2) - 1;
+           mid_last_int = mid_first_int + 3; 
+           mid_three_char = str.substring(mid_first_int,mid_last_int);
+            console.log(mid_three_char);
+        }
+        else {
+            console.log(false,'given string length is not an odd!');
+        }
+    }
+    else{
+        console.log(false,'string length is less than 3!');
+    }
+}
+middle_three_char('abcde');
+middle_three_char('abcdefg');
+middle_three_char('abcdefghi');
+middle_three_char('abcdefghijk');
+middle_three_char('abcdefghijklmnopq');
+
+middle_three_char('abc');
+middle_three_char('ab');
+middle_three_char('abcd');
+
+
+// Method 2
+function middle_three(str){
+    if(str.length % 2 != 0){
+        if(str.length >= 3){
+            mid = (str.length +1) / 2;
+            mid = str.slice(mid - 2,mid + 1);
+            console.log(mid)
+        }
+    }
+};
+middle_three('abcdefg');
+middle_three('hello');
 </script>    
 </body>
 </html>
