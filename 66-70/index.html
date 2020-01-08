@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ 
+
+<script>
+
+// 66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
+
+function checkCity(str){
+    if(str.length >= 3 && ((str.substring(0,3) === 'New') || str.substring(0,3) === 'Los')){
+        return str;
+    }
+    else {
+        return "";
+    }
+}
+console.log(checkCity('New Jersey'));
+console.log(checkCity('Los Angeles'));
+console.log(checkCity('New York'));
+console.log(checkCity('London'));
+
+</script>    
+</body>
+</html>
