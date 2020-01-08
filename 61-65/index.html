@@ -1,90 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
 
-<script>
+    <script>
 
-// 61. Write a JavaScript program to concatenate two strings except their first character.  
+        // 61. Write a JavaScript program to concatenate two strings except their first character.  
 
-function concatenate_strings(a,b){
-if(a.length < 2  || b.length < 2) return false;
-result  = a.substring(1) + b.substring(1);
-return result;
-}
-console.log(concatenate_strings('php','js'));
-console.log(concatenate_strings('a','s'));
-console.log(concatenate_strings('s','sb'));
-
-// 62. Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
-
-function move_first_three(str){
-if(str.length >= 3){
- starting_string = str.substring(0,3);
- remaining_string = str.substring(3);
- result = remaining_string + starting_string; 
- return result;
-}
-else { 
-    return false;
-}
-
-};
-console.log(move_first_three('python'));
-console.log(move_first_three('hi'));
-
-// 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater or equal to three.
-
-
-// Math.trunc()  (eliminate fractional part)
-// Math.floor()  (round down)
-// Math.ceil()   (round up)
-// Math.round()  (round to nearest integer)
-  
-function middle_three_char(str){
-    if(str.length >= 3){
-        if(str.length % 2 !== 0){
-           mid_first_int =  Math.floor(str.length / 2) - 1;
-           mid_last_int = mid_first_int + 3; 
-           mid_three_char = str.substring(mid_first_int,mid_last_int);
-            console.log(mid_three_char);
+        function concatenate_strings(a, b) {
+            if (a.length < 2 || b.length < 2) return false;
+            result = a.substring(1) + b.substring(1);
+            return result;
         }
-        else {
-            console.log(false,'given string length is not an odd!');
+        console.log(concatenate_strings('php', 'js'));
+        console.log(concatenate_strings('a', 's'));
+        console.log(concatenate_strings('s', 'sb'));
+
+        // 62. Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
+
+        function move_first_three(str) {
+            if (str.length >= 3) {
+                starting_string = str.substring(0, 3);
+                remaining_string = str.substring(3);
+                result = remaining_string + starting_string;
+                return result;
+            }
+            else {
+                return false;
+            }
+
+        };
+        console.log(move_first_three('python'));
+        console.log(move_first_three('hi'));
+
+        // 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater or equal to three.
+
+
+        // Math.trunc()  (eliminate fractional part)
+        // Math.floor()  (round down)
+        // Math.ceil()   (round up)
+        // Math.round()  (round to nearest integer)
+
+        function middle_three_char(str) {
+            if (str.length >= 3) {
+                if (str.length % 2 !== 0) {
+                    mid_first_int = Math.floor(str.length / 2) - 1;
+                    mid_last_int = mid_first_int + 3;
+                    mid_three_char = str.substring(mid_first_int, mid_last_int);
+                    console.log(mid_three_char);
+                }
+                else {
+                    console.log(false, 'given string length is not an odd!');
+                }
+            }
+            else {
+                console.log(false, 'string length is less than 3!');
+            }
         }
-    }
-    else{
-        console.log(false,'string length is less than 3!');
-    }
-}
-middle_three_char('abcde');
-middle_three_char('abcdefg');
-middle_three_char('abcdefghi');
-middle_three_char('abcdefghijk');
-middle_three_char('abcdefghijklmnopq');
+        middle_three_char('abcde');
+        middle_three_char('abcdefg');
+        middle_three_char('abcdefghi');
+        middle_three_char('abcdefghijk');
+        middle_three_char('abcdefghijklmnopq');
 
-middle_three_char('abc');
-middle_three_char('ab');
-middle_three_char('abcd');
+        middle_three_char('abc');
+        middle_three_char('ab');
+        middle_three_char('abcd');
 
 
-// Method 2
-function middle_three(str){
-    if(str.length % 2 != 0){
-        if(str.length >= 3){
-            mid = (str.length +1) / 2;
-            mid = str.slice(mid - 2,mid + 1);
-            console.log(mid)
+        // Method 2
+        function middle_three(str) {
+            if (str.length % 2 != 0) {
+                if (str.length >= 3) {
+                    mid = (str.length + 1) / 2;
+                    mid = str.slice(mid - 2, mid + 1);
+                    console.log(mid)
+                }
+            }
+        };
+        middle_three('abcdefg');
+        middle_three('hello');
+
+
+        // 64. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
+        // if both the strings are not same then below code get the inital same string length (done by myself)
+
+        function concatenateSameString(str1, str2) {
+            if (str1.length === str2.length) {
+                console.log(str1 + ' ' + str2);
+            }
+            else if (str1.length > str2.length) {
+                max_str_val = str1;
+                result = max_str_val.substring(0, str2.length);
+                console.log(result + ' ' + str2);
+            }
+            else {
+                max_str_val = str2;
+                result = max_str_val.substring(0, str1.length);
+                console.log(str1 + ' ' + result);
+            }
+        };
+        concatenateSameString('hi', 'how');
+        concatenateSameString('hello', 'world');
+        concatenateSameString('geography', 'history');
+
+
+        // // Method 2
+        // if both the strings are not same then its get the last string values 
+        function str_con_Cat(str1, str2) {
+            const m = Math.min(str1.length, str2.length);
+            result = str1.substring(str1.length - m) + ' ' + str2.substring(str2.length - m);
+            console.log(result);
         }
-    }
-};
-middle_three('abcdefg');
-middle_three('hello');
-</script>    
+        str_con_Cat('python', 'js');
+        str_con_Cat('hello', 'world');
+    </script>
 </body>
+
 </html>
