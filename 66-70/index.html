@@ -67,9 +67,40 @@ else {
 
 };
 first_last_n('javascript',2);
-first_last_n('abc',2)
-first_last_n('ab',2)
-first_last_n('a',2)
+first_last_n('photoshop',3);
+first_last_n('a',2);
+
+// 69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3. 
+
+function computeSum(arr){
+    console.log(arr);
+    result = arr[0] +arr[1] +arr[2];
+    console.log(result)
+};
+computeSum([10,20,30]);
+
+// Method 2
+
+function compute_sum(arr){
+    sum = 0;
+    for(var i =0; i < arr.length;i++){
+        sum += arr[i];
+    }
+    console.log(sum);
+};
+compute_sum([70,10,20]);
+
+// Method 3 by using for of loop
+
+function sum_compute(arr){
+    count = 0;
+for(let abc of arr){
+    count += abc;
+}
+console.log(count)
+};
+sum_compute([20,10,20,5]);
+
 </script>    
 </body>
 </html>
