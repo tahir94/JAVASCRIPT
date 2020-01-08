@@ -52,6 +52,24 @@ checkP('python');
 checkP('abcdp');
 checkP('captain');
 
+// 68. Write a JavaScript program to create a new string using the first and last n characters from a given sting. The string length must be greater or equal to n
+
+function first_last_n(str,n){
+if(str.length >= n){
+first_n = str.substring(0,n);
+last_n  = str.substring(str.length - n);
+result = first_n + last_n;
+console.log(result);
+}
+else {
+    console.log(false,'the string length is below from n !')
+}
+
+};
+first_last_n('javascript',2);
+first_last_n('abc',2)
+first_last_n('ab',2)
+first_last_n('a',2)
 </script>    
 </body>
 </html>
