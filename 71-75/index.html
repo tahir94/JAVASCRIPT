@@ -53,6 +53,21 @@ console.log(first_last_equal([10,20,10]));
 console.log(first_last_equal([10,20,30]));
 console.log(first_last_equal([10]));
 
+// 73. Write a JavaScript program to reverse the elements of a given array of integers length 3. 
+
+function reverse3(array) {
+    //  newArray = array.map((element, idx, arr) => arr[(arr.length - 1) - idx]); // by using arrow function short way
+
+      newArray = array.map(function(elem,ind,arr){
+        return arr[(arr.length - 1) - ind];
+      })
+      return newArray;
+}
+
+console.log(reverse3([5, 4, 3])); 
+console.log(reverse3([1, 0, -1]));  
+console.log(reverse3([2, 3, 1]));
+
 </script>    
 </body>
 </html>
