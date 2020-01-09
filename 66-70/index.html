@@ -101,6 +101,20 @@ console.log(count)
 };
 sum_compute([20,10,20,5]);
 
+// 70. Write a JavaScript program to rotate the elements left of a given array of integers of length 3.
+
+function rotateElements(arr){
+    count = 1;
+    arr2 = [];
+    for(var a of arr){
+        arr2.push(arr[arr.length - count]); 
+        count++;
+    }
+    arr = arr2;
+    console.log(arr)
+};
+rotateElements([3,4,5]);
+
 </script>    
 </body>
 </html>
