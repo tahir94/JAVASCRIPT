@@ -11,6 +11,38 @@
 
 <script>
 
+// 76. Write a JavaScript program to create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1. 
+
+function first_last_elem(arr){
+    if(arr.length >= 1){
+        first = arr[0].toString();
+        last = arr[arr.length - 1].toString();
+        result = first + last;
+        output = [];
+        for(var i =0;i < result.length; i++){
+            output.push(+result.charAt(i));
+        }
+        console.log(output)
+    }
+    else{
+        console.log(false,'array length must be greater than 1..')
+    }
+};
+first_last_elem([2,3,4,5,6]);
+
+// Method 2
+
+function firstLastElem(arr){
+newArray = [];
+firsElem = arr.slice(0,1);
+lastElem = arr.slice(-1);
+newArray.push(firsElem[0],lastElem[0]);
+console.log(newArray);
+
+};
+firstLastElem([10,12,14,16]);
+
+
 </script>    
 </body>
 </html>
