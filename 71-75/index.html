@@ -68,6 +68,56 @@ console.log(reverse3([5, 4, 3]));
 console.log(reverse3([1, 0, -1]));  
 console.log(reverse3([2, 3, 1]));
 
+// 74. Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array
+
+function larger_first_last(array){
+if(array[0] > array[array.length - 1]){
+    newArray = array.map(function(elem,i,arr){
+            elem = arr[0]
+            return elem;
+    })
+}
+else if(array[0] < array[array.length - 1]){
+    newArray = array.map(function(elem,ind,arr){
+        elem = arr[arr.length - 1];
+        return elem;
+    })
+}
+else {
+    console.log(array)
+    return array;
+}
+console.log(newArray)
+};
+larger_first_last([40,30,20]);
+larger_first_last([50,70,90]);
+larger_first_last([30,30,30]);
+
+// Method 2
+function all_max(arr){
+    max_val = arr[0] > arr[2] ? arr[0] : arr[2];
+    arr[0] = max_val;
+    arr[1] = max_val;
+    arr[2] = max_val;
+    console.log(arr)
+
+};
+all_max([-7,-9,0]);
+all_max([50,30,20]);
+all_max([5,2,5]);
+
+
+// Method 3
+
+function allMax(arr){
+    maxVal = arr[0] > arr[arr.length - 1] ? arr[0] : arr[arr.length - 1];
+    for(var i =0; i < arr.length; i++){
+        arr[i] = maxVal;
+    }
+    console.log(arr)
+}; 
+allMax([15,20,25]);
+
 </script>    
 </body>
 </html>
