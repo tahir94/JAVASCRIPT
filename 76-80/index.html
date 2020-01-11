@@ -98,6 +98,28 @@ twice3040([30,30])
 twice3040([40,40])
 twice3040([20,20])
 
+// 80. Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1
+
+function swap_first_last(arr){
+output = [];
+first = arr[0].toString();
+last = arr[arr.length - 1].toString();
+remaining = arr.slice(1,-1).toString();
+remaining = remaining.split(',').join('')
+result = last + remaining + first;
+for(var i = 0 ; i < result.length;i++){
+    output.push(+result.charAt(i))
+}
+console.log(output);
+};
+swap_first_last([3,4,6,8,9]);
+
+// Method 2
+function swap(arr){
+[arr[0],arr[arr.length - 1]] = [arr[arr.length-1],arr[0]]
+console.log(arr)
+}
+swap([1,2,3,4]);
 </script>    
 </body>
 </html>
