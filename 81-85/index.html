@@ -73,6 +73,32 @@ function add_two_int_without_carrying(n1, n2) {
 console.log(add_two_int_without_carrying(222, 911));
 console.log(add_two_int_without_carrying(200, 900));
 
+// 83. Write a JavaScript to find the longest string from a given array of strings
+function longestString(arr){
+largest = '0';
+for(var i =0; i < arr.length;i++){
+    if(arr[i].length > largest.length){
+        largest = arr[i];
+    }
+
+}
+console.log(largest)
+}
+longestString(['abc','abcdefg','ab','abcd']);
+
+// Method 2
+
+function largest_string(arr){
+// for max value length of element
+max = arr[0].length;
+arr.map(v => max = Math.max(max,v.length));
+
+// now filter the max value 
+result = arr.filter(v => max === v.length);
+console.log(result);
+}
+largest_string(['aaaa','a','aa','aaaaa']);
+
 </script>    
 </body>
 </html>
