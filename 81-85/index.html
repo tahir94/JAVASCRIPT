@@ -40,6 +40,24 @@ function addTwoDigits(num){
 console.log(addTwoDigits(41));
 console.log(addTwoDigits(75));
 
+// 82. Write a JavaScript to add two positive integers without carry.
+
+function add_without_carry(num1,num2){
+    num1 = num1.toString();
+    num2 = num2.toString();
+    result1 = +num1[0] + +num2[0];
+    result2 = +num1[1] + +num2[1];
+    result3 = +num1[2] + +num2[2];
+    result1 = result1 % 10;
+    result2 = result2 % 10;
+    result3 = result3 % 10;
+    totalResult = result1.toString() + result2.toString() + result3.toString();
+    totalResult = Number(totalResult)
+    console.log(totalResult);
+};
+add_without_carry(222,911);
+add_without_carry(200,900);
+
 </script>    
 </body>
 </html>
