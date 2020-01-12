@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// 81. Write a JavaScript program to add two digits of a given positive integer of length two. 
+
+function add_two_digits(num){
+    num = num.toString();
+    num = num.split('').map(Number);
+    result = num[0] + num[1];
+    console.log(result);
+}
+add_two_digits(12);
+
+// Method 2
+
+function add_2_digits(num){
+num = num.toString();
+result = +num[0] + +num[1];
+console.log(result);
+};
+add_2_digits(25);
+
+
+</script>    
+</body>
+</html>
