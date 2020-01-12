@@ -30,6 +30,16 @@ console.log(result);
 add_2_digits(25);
 
 
+// Method 3
+// if we want the last digit from a number so we can get it by % that num with 10
+// and if we want first digit from a number so we can get it by / that number with 10
+
+function addTwoDigits(num){
+    return Math.floor(num / 10) + num % 10;
+};
+console.log(addTwoDigits(41));
+console.log(addTwoDigits(75));
+
 </script>    
 </body>
 </html>
