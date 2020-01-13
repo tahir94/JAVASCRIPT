@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+
+// 86. Write a JavaScript program to find the types of a given angle.
+// Types of angles:
+// Acute angle: An angle between 0 and 90 degrees.
+// Right angle: An 90 degree angle.
+// Obtuse angle: An angle between 90 and 180 degrees.
+// Straight angle: A 180 degree angle
+
+function angle_type(num){
+let result = '';
+if(num > 0 && num < 90){
+result = 'Acute Angle'
+}
+else if(num === 90){
+result = 'Right Angle';
+}
+else if(num > 90 && num < 180){
+    result =' Obtuse Angle';
+}
+else if(num === 180) {
+    result = 'Straight Angle'
+}
+console.log(result);
+}
+
+angle_type(48);
+angle_type(110);
+angle_type(180);
+angle_type(90);
+
+// Method 2
+    result = '';
+function angleType(num){
+    switch(true){
+
+        case  num <  90: 
+        result = 'Acute Angle';
+        break;
+
+        case num === 90:
+        result = 'Right Angle';
+        break;
+
+        case num < 180:
+        result =' Obtuse Angle';
+        break;
+
+        case num === 180:
+        result = 'Straight Angle';
+        break;
+
+        default:
+        console.log('there is no angle between 0 and 180..');
+        return;
+    }
+    console.log(result)
+};
+
+angleType(110);
+angleType(90);
+angleType(40);
+angleType(180);
+angleType(200);
+
+</script>    
+</body>
+</html>
