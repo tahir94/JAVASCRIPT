@@ -117,6 +117,16 @@ return false;
 }
 console.log(similar_arrays([10,20,30],[10,20,30]));
 
+// 88. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
+
+function check_similar_by_divisor(arr){
+    last = arr.slice(-1);
+    (arr[0] % last === 0 && arr[1] % last === 0) ? console.log(true) : console.log(false);
+};
+check_similar_by_divisor([10,25,5]);
+check_similar_by_divisor([10,20,4]);
+
+
 </script>    
 </body>
 </html>
