@@ -10,6 +10,43 @@
 
 <script>
 
+// 96. Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers. \
+function absDifference(arr){
+    let temp;
+    let result = 0;
+for (let i = 0; i < arr.length - 1; i++) {
+     temp = Math.abs(arr[i] - arr[i + 1]);
+     result += temp;
+}
+console.log(result);
+
+}
+absDifference([1,2,3,2,-5]);
+absDifference([1,2,3,2,5,4])
+
+// 98. Write a JavaScript program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case.
+
+function minimumCharCase(str){
+    temp1 = '';
+    temp2 ='';
+    for (let i = 0; i < str.length; i++) {
+        if(str[i] === str[i].toLowerCase()){
+            // small letters exist here
+            temp1 += str[i];
+        }        
+        else {
+            // capital letters exist here
+            temp2 += str[i];
+        }
+    }
+    (temp1.length > temp2.length) ? result = str.toLowerCase() : result = str.toUpperCase(); 
+    console.log(result)
+}
+minimumCharCase('Write');
+minimumCharCase('PHp');
+minimumCharCase('DEMO');
+minimumCharCase('HelLO');
+
 </script>
 </body>
 </html>
