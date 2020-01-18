@@ -114,7 +114,21 @@ function array_element_mode(arr) {
   }
   return ans + 1;  
 }
-console.log(array_element_mode([1, 2, 3, 2, 2, 8, 1, 9]))
+console.log(array_element_mode([1, 2, 3, 2, 2, 8, 1, 9]));
+
+// 95. Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.
+
+function replaceNums(arr){
+// replacibng the number 2 with 5
+for(var i=0; i< arr.length; i++){
+if(arr[i] === 2){
+arr[i] = 5;
+}
+}
+console.log(arr)
+}
+replaceNums([2,4,6,8,2,5,2]);
+
 </script>    
 </body>
 </html>
