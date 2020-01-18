@@ -82,6 +82,39 @@ console.log(max_difference([1,2,3,8,9]));
 console.log(max_difference([1,2,3,18,9]));
 console.log(max_difference([13,2,3,8,9]));
 
+// 94. Write a JavaScript program to find the number which appears most in a given array of integers
+
+function mostAppearedNum(arr){
+    test = '';
+    result= 1;
+    for (let i = 0; i < arr.length; i++) {
+       previousMaxValue = test;
+       test = arr.filter(num => num === arr[i]);
+       (result.length > test.length) ? result : result = test;
+
+    }
+    console.log(result);
+}
+mostAppearedNum([1,2,3,2,2,3,8,1,9]);
+
+// Method 2
+
+function array_element_mode(arr) {
+  var ctr = [],
+    ans = 0;
+
+  for(var i = 0; i < 10; i++) {
+    ctr.push(0);
+  }
+  for(var i = 0; i < arr.length; i++) {
+    ctr[arr[i] - 1]++;
+    if(ctr[arr[i] - 1] > ctr[ans]) {
+      ans = arr[i] - 1;
+    }
+  }
+  return ans + 1;  
+}
+console.log(array_element_mode([1, 2, 3, 2, 2, 8, 1, 9]))
 </script>    
 </body>
 </html>
