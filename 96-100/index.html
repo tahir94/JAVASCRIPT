@@ -47,6 +47,62 @@ minimumCharCase('PHp');
 minimumCharCase('DEMO');
 minimumCharCase('HelLO');
 
+
+// 100. Write a JavaScript program to check whether there is at least one element which occurs in two given sorted arrays of integers. 
+
+function arr_similar_elem(arr1,arr2){
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+        if(arr1[i] === arr2[j]){
+        result = arr1[i];
+    }
+    }
+}
+console.log(result);
+}
+arr_similar_elem([1,2,3],[3,4,5])
+
+
+// Method 2
+function arrSimilarElem(arr1,arr2){
+arr1.forEach(element => {
+   arr2.forEach(elem => {
+       if(element === elem) {
+           const result = element;
+       }
+   }) 
+});
+console.log(result);
+}
+arrSimilarElem([1,2,3],[3,4,5]);
+
+// Method 3
+
+function arr_SimilarElem(arr1,arr2){
+    newArr = arr1.filter(elem => {
+        for (const iterator of arr2) {
+            if(iterator == elem){
+                return iterator;
+            }
+        }
+    });
+    console.log(newArr)
+};
+arr_SimilarElem([4,5,6],[7,6,9]);
+
+
+// Method 4 
+function common_element(arr1,arr2){
+for (let i = 0; i < arr1.length; i++) {
+    if(arr2.indexOf(arr1[i]) != -1){
+        result = arr1[i];
+    }    
+}
+console.log(result)
+}
+common_element([1,2,3],[3,4,5]);
+
+
 </script>
 </body>
 </html>
