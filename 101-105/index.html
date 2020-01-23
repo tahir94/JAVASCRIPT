@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// 103. Write a JavaScript program to find the maximal number from a given positive integer by deleting exactly one digit of the given number.
+
+function maximumNum(num){
+    let temp1 = '';
+    let temp2 = '';
+    let maxVal = 0;
+    num = num.toString();
+    num_in_arr = num.split('');
+    for (let i = 0; i < num.length - 1; i++) {
+        temp1 += num[i]
+        console.log(temp1);
+    }
+    for (let i = 1; i < num.length; i++) {
+        temp2 += num[i]
+        console.log(temp2);
+    }
+    (temp1 > temp2) ? maxVal = temp1 : maxVal = temp2;
+    maxVal = maxVal.split('');
+    console.log(maxVal,'==',num_in_arr);
+    result = num_in_arr.filter(x => {
+        x = +x;
+        for(let elem of maxVal){
+            elem = +elem
+            console.log(elem,typeof elem,'==',x,typeof x);
+            if(elem === x){
+                return x;
+            }
+        }
+        
+    });
+    result = +result.join('');
+    console.log(result);
+};
+maximumNum(125);
+maximumNum(1245);
+maximumNum(35675);
+maximumNum(1);
+
+
+// Method 2
+function digit_delete(num) {
+    var result = 0,
+        num_digits = [];
+    while (num) {
+        num_digits.push(num % 10);
+        num = Math.floor(num / 10);
+    }
+    for (var index_num = 0; index_num < num_digits.length; index_num++) {
+        var n = 0;
+        for (var i = num_digits.length - 1; i >= 0; i--) {
+            if (i !== index_num) {
+                n = n * 10 + num_digits[i];
+            }
+        }
+        result = Math.max(n, result);
+    }
+    return result;
+}
+
+console.log(digit_delete(100));
+console.log(digit_delete(10));
+console.log(digit_delete(1245)); 
+
+</script>    
+</body>
+</html>
