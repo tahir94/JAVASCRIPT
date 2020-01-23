@@ -100,6 +100,26 @@ function num_in_one_digit(num){
 //   return result;
 };
 num_in_one_digit(156);
+
+// Method 2
+function digit_to_one(num){
+    result = 0;
+    digitSum = function(num){
+    digit_sum = 0;
+        while(num){
+            digit_sum += num % 10;
+            num = Math.floor(num / 10);
+        }
+        return digit_sum;
+    }
+    while(num >= 10){
+        result += 1;
+        num = digitSum(num)
+    }
+    return result;
+};
+console.log(digit_to_one(156));
+
 </script>    
 </body>
 </html>
