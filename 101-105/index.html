@@ -72,6 +72,34 @@ console.log(digit_delete(100));
 console.log(digit_delete(10));
 console.log(digit_delete(1245)); 
 
+// 105. Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
+
+// unsolved mystery 
+
+function getlength(number) {
+    return number.toString().length;
+}
+function num_in_one_digit(num){
+    let n = num.toString();
+    let count = 0;
+    let result = 0;
+    // if(n.length > 1){
+    for (let i = 0; i < n.length; i++) {
+        count += +n[i];
+        console.log(count,typeof count);
+        result = count;
+    }
+//   }
+//   else {
+    //   result = num;
+//   };
+  if(result.toString().length > 1){
+  num_in_one_digit(result);
+  console.log(result,'===',count);
+  }
+//   return result;
+};
+num_in_one_digit(156);
 </script>    
 </body>
 </html>
