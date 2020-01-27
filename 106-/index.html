@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// 109 (a) write a javascript program to find the given integer a prime number
+function checkPrime(num){
+ for(var i = 2 ;i <= num - 1;i++)
+ {
+     if(num % i === 0){
+        console.log(`${num} is not a prime number and is divisible by ${i}`);
+        return;
+
+     }
+ }
+       console.log(`${num} is a prime Number...`);
+
+} 
+checkPrime(9);
+
+// (b). Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
+
+function sort_prime(x){
+    let arr = [];
+    for(var i = x;i > 1;i--){
+    let flag = true;
+     for (let j = 2; j < i; j++) {
+         if(i % j === 0){
+            flag = false;
+         }
+     }
+     if(flag === true){
+     arr.push(i);
+     flag = false;
+
+     }
+ };
+ arr = arr.sort((a,b)=>a-b);
+ console.log(arr)
+
+}
+sort_prime(7);
+sort_prime(17);
+
+</script>    
+</body>
+</html>
