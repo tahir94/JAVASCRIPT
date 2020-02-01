@@ -72,6 +72,71 @@ correctSentence('This charachter is coorect.');
 correctSentence('This charachter is coorect');
 correctSentence('this charachter is coorect.');
 
+// 115. Write a JavaScript program to check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right).
+
+function checkDiagonal(arr){ 
+    array = [1,0,0];
+  for (let i = 0; i < array.length; i++) {
+    if(i === 0){
+        console.log(array[i])
+    }
+    else {
+        console.log(array[i])
+    }      
+  }
+    for (let i = 0; i < arr.length; i++) {        
+        console.log(arr[i]);
+        for (let j = 0; j < arr.length ; j++) {
+            console.log(arr[i][j],'==',arr[j]);
+            if(i === j){
+                console.log(arr[i][j]);
+                if(arr[i][j] === 0){
+                    result = false;
+                    return;
+                }
+            }
+            else{
+                console.log(arr[i][j]);
+                if(arr[i][j] !== 0){
+                    result = false;
+                    return;
+                }
+            }            
+        }
+      
+    }
+    console.log(result)
+}
+// checkDiagonal([[1,0,0],[0,2,0],[0,0,3]]);
+checkDiagonal([[1, 0, 0], [0, 2, 3], [0, 0, 3] ]);
+
+function is_diagonal_matrix(user_matrix) {
+    for (var i = 0; i < user_matrix.length; i++) {
+        for (var j = 0; j < user_matrix.length; j++) {
+            if (i !== j && user_matrix[i][j] !== 0) 
+              return false;
+        }
+    }
+    return true;
+}
+
+
+// console.log(is_diagonal_matrix([[1, 0, 0], [0, 2, 0], [0, 0, 3] ]));
+console.log(is_diagonal_matrix([[1, 0, 0], [0, 2, 3], [0, 0, 3] ]));
+
+// 119. Write a JavaScript program to check whether a given integer has an increasing digits sequence.
+function check_increasing_digits(array){
+for (let i = 0; i < array.length-1; i++) {
+    if(array[i] >= array[i+1]){
+        console.log(false);
+        return;
+    }    
+}
+console.log(true);
+}
+check_increasing_digits([1,2,3]);
+check_increasing_digits([1,2,2,3]);
+
 </script>    
 </body>
 </html>
