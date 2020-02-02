@@ -153,6 +153,33 @@ console.log(result);
 }
 longest_string(['abc','aasdfgh','foo']);
 
+// 126. Write a JavaScript program to get the largest even number from an array of integers.
+
+function max_even(arr){
+    let max_val = 0;
+    for (let i = 0; i < arr.length; i++) {
+            if(arr[i] % 2 === 0 ){
+            max_val = Math.max(max_val,arr[i]);
+            }      
+    }
+        console.log(max_val);  
+};
+max_even([20,200,40,301]);
+
+// Method 2
+function max_even(arra) {
+
+arra.sort((x, y) => y - x);
+
+for (var i = 0; i < arra.length; i++) {
+  if (arra[i] % 2 == 0)
+    return arra[i];
+  }
+}
+
+console.log(max_even([20, 40, 200]));
+console.log(max_even([20, 40, 200, 301]));
+
 </script>    
 </body>
 </html>
