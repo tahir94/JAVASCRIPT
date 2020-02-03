@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// 127. Write a JavaScript program to reverse the order of a given integer
+
+function reverse_num(int){
+    new_array = [];
+    asd = (int + '').split('');
+    for (let i = asd[asd.length -2]; i >= 0; i--) {
+          new_array.push(asd[i]);          
+    }
+    asd = +new_array.join('');
+    console.log(new_array,'===',asd)
+}
+reverse_num(123);
+
+// Method 2
+
+function reverseNum(num){
+    return (
+        parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
+        )
+};
+console.log(reverseNum(987));
+
+</script>
+</body>
+</html>
