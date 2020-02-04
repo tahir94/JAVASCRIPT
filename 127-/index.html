@@ -31,6 +31,53 @@ function reverseNum(num){
 };
 console.log(reverseNum(987));
 
+
+// 128. Write a JavaScript program to find the smallest round number that is not less than a given value. Go to the editor
+// Note: A round number is informally considered to be an integer that ends with one or more zeros.[3] So, 590 is rounder than 592, but 590 is less round than 600.
+
+function nearest_round_number(num) {
+    while (num % 10) {
+        num++;
+    }
+    return num;
+}
+
+console.log(nearest_round_number(56));
+console.log(nearest_round_number(592));
+
+// 129. Write a JavaScript program to find the smallest prime number strictly greater than a given number.
+function next_Prime_num(num) {
+    for (var i = num + 1;; i++) {
+        var isPrime = true;
+        for (var d = 2; d * d <= i; d++) {
+            if (i % d === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            return i;
+        }
+    }
+}
+
+console.log(next_Prime_num(3));
+console.log(next_Prime_num(17));
+
+// 130. Write a JavaScript program to find the number of even digits in a given integer.
+function num_of_even_digits(num){
+count = 0;
+num = (num + '').split('');
+for (let i = 0; i < num.length; i++) {
+       if(num[i] % 2 === 0){
+            count++;
+       }
+}
+console.log(count)
+}
+num_of_even_digits(123);
+num_of_even_digits(1020);
+
 </script>
 </body>
 </html>
