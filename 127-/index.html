@@ -102,6 +102,37 @@ function replace_first_digit(str){
 }
 replace_first_digit('p3ython');
 
+// 139. Write a JavaScript program to find the position of a rightmost round number in an array of integers. Returns 0 if there are no round number
+
+function rightMostRound(arr) {
+        let flag = true;
+        for (let i = 0; i < arr.length; i++) {
+            temp = arr[i] + '';
+            if (temp.slice(-1) == 0) {
+                const indexNum = arr.indexOf(arr[i]);
+                flag = false;
+            }
+        }
+        if (flag === true) {
+            console.log(0);
+        }
+        console.log(temp)
+    }
+    rightMostRound([55, 1, 2])
+
+// Method 2
+function rightmost_round(arr){
+    result = 0;
+    for (let i = 0; i < arr.length; i++) {
+            if(arr[i] % 10 === 0){
+                result = i
+            }        
+    }
+    return result;
+}
+console.log(rightmost_round([1,5,15])); 
+console.log(rightmost_round([1,50,15]));
+
 </script>
 </body>
 </html>
