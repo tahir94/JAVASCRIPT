@@ -78,6 +78,30 @@ console.log(count)
 num_of_even_digits(123);
 num_of_even_digits(1020);
 
+// 136. Write a JavaScript program to replace the first digit in a string (should contains at least digit) with $ character.
+
+function replace_first_digit(str){
+    str = str.split('');
+    str.forEach((element,i,theArray) => {
+       temp = element *1;
+       if(!isNaN(temp)){
+           theArray[i] = '$';
+       } 
+    });
+
+    // Method 2
+    // str = str.map(function(elem){
+    //     temp = elem * 1;
+    //     if(!isNaN(temp)){
+    //     //  elem = '$';
+    //     elem =  elem.replace(elem,'$')
+    //     }
+    //      return elem;   
+    // })
+    console.log(str)
+}
+replace_first_digit('p3ython');
+
 </script>
 </body>
 </html>
