@@ -133,6 +133,22 @@ function rightmost_round(arr){
 console.log(rightmost_round([1,5,15])); 
 console.log(rightmost_round([1,50,15]));
 
+// 140. Write a JavaScript program to check whether all the digits in a given number are the same or not. 
+
+function check_same_num(x){
+x = (x + '').split('');
+for (let i = 0; i < x.length-1; i++) {
+    first = x.indexOf(x[i]);
+    last = x.lastIndexOf(x[i]);
+    console.log(first,'===',last)
+      if(x.indexOf(x[i]) === x.lastIndexOf(x[i])){
+          return false;
+      }
+    }
+    return true;
+}
+console.log(check_same_num(1111));
+
 </script>
 </body>
 </html>
