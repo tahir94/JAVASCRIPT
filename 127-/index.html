@@ -149,6 +149,20 @@ for (let i = 0; i < x.length-1; i++) {
 }
 console.log(check_same_num(1111));
 
+// 141. Write a JavaScript program to find the number of elements which presents in both of the given arrays
+
+function elem_in_both_arr(arr1,arr2){
+    result = 0;
+    sameElems = arr1.filter((elem,ind) => {
+        if(elem === arr2[ind]){
+        result++;    
+        return elem;
+        }
+    });
+    console.log(sameElems,'===',result)
+}
+elem_in_both_arr([1,2,3,4],[1,2,3,5]);
+
 </script>
 </body>
 </html>
